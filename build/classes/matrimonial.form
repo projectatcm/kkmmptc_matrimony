@@ -129,6 +129,9 @@
         <Property name="text" type="java.lang.String" value="CLEAR"/>
         <Property name="name" type="java.lang.String" value="L2" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_clearActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_login">
       <Properties>

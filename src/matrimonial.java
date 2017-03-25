@@ -74,6 +74,11 @@ public class matrimonial extends javax.swing.JFrame {
         btn_clear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_clear.setText("CLEAR");
         btn_clear.setName("L2"); // NOI18N
+        btn_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearActionPerformed(evt);
+            }
+        });
 
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_login.setText("LOG IN");
@@ -166,6 +171,13 @@ public class matrimonial extends javax.swing.JFrame {
         
                                       
     }//GEN-LAST:event_btn_loginActionPerformed
+
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        matrimonial m=new matrimonial();
+        m.setVisible(true);
+    }//GEN-LAST:event_btn_clearActionPerformed
 
     /**
      * @param args the command line arguments

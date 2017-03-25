@@ -126,13 +126,25 @@ public class Register_form extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(btn_male);
         btn_male.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_male.setText("Male");
+        btn_male.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_maleActionPerformed(evt);
+            }
+        });
 
+        buttonGroup1.add(btn_female);
         btn_female.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_female.setText("Female");
 
         cmb_dd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        cmb_dd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmb_ddActionPerformed(evt);
+            }
+        });
 
         cmb_mm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agu", "Sep", "Nov", "Dec" }));
 
@@ -167,9 +179,19 @@ public class Register_form extends javax.swing.JFrame {
 
         btn_back.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_back.setText("Back");
+        btn_back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_backActionPerformed(evt);
+            }
+        });
 
         btn_clear.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_clear.setText("Clear");
+        btn_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearActionPerformed(evt);
+            }
+        });
 
         txt_dd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txt_dd.setText("DD");
@@ -200,36 +222,7 @@ public class Register_form extends javax.swing.JFrame {
                 .addGap(119, 119, 119)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(cmb_caste, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmb_religion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmb_mpf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(txt_number, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(cmb_mt, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cmb_livin, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(226, 226, 226)
-                                        .addComponent(btn_clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(224, 224, 224)
-                                        .addComponent(btn_back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(226, 226, 226)
-                                        .addComponent(btn_register)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addGap(119, 119, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn_male)
-                                .addGap(53, 53, 53)
-                                .addComponent(btn_female))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txt_dd)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -241,8 +234,31 @@ public class Register_form extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txt_yy)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cmb_yy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(cmb_yy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btn_male)
+                                .addGap(28, 28, 28)
+                                .addComponent(btn_female)))
+                        .addGap(0, 369, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cmb_caste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmb_religion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmb_mpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txt_number, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cmb_mt, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cmb_livin, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btn_clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btn_register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btn_back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(91, 91, 91)
                 .addComponent(lbl_register, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -261,11 +277,10 @@ public class Register_form extends javax.swing.JFrame {
                     .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_name))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_female, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn_male)
-                        .addComponent(lbl_gender)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_male)
+                    .addComponent(lbl_gender)
+                    .addComponent(btn_female))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -312,7 +327,7 @@ public class Register_form extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_register)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_clear)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_back)
@@ -330,12 +345,33 @@ public class Register_form extends javax.swing.JFrame {
         // TODO add your handling code here:
         String phone=txt_number.getText();
         String name=txt_name.getText();
-        String email=txt_email.getText();
-        
-   
-     
-              
-       
+        String mpf=(String) cmb_mpf.getSelectedItem();
+        btn_male.setActionCommand("male");
+        btn_female.setActionCommand("female");
+        String gender=buttonGroup1.getSelection().getActionCommand();
+        String day=(String) cmb_dd.getSelectedItem();
+        String month=(String) cmb_mm.getSelectedItem();
+        String year=(String) cmb_yy.getSelectedItem();
+        String dob=day+"/"+month+"/"+year;
+        String religion=(String) cmb_religion.getSelectedItem();
+        String caste=(String) cmb_caste.getSelectedItem();
+        String mt=(String) cmb_mt.getSelectedItem();
+        String mb_no=txt_number.getText();
+        String livin=(String) cmb_livin.getSelectedItem();
+        String lg_password=txt_password.getText();
+        try {
+            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/matrimony_db","root","");
+            Statement stmt = connect.createStatement();
+            String query = "INSERT INTO Register_form set mpf='"+mpf+"', name='"+name+"', gender='"+gender+"', dob='"+dob+"', religion='"+religion+"', caste='"+caste+"', mt='"+mt+"', mb_no='"+mb_no+"', livin='"+livin+"', lg_password='"+lg_password+"'";
+            System.out.println(query);
+            stmt.executeUpdate(query);
+            JOptionPane.showMessageDialog(rootPane,"Inserted");
+        } catch (Exception e) {
+            //e.printStackTrace();
+            JOptionPane.showMessageDialog(rootPane,e.getMessage());
+           
+        }
+                
     }//GEN-LAST:event_btn_registerActionPerformed
 
     private void cmb_religionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_religionActionPerformed
@@ -357,6 +393,32 @@ public class Register_form extends javax.swing.JFrame {
             Logger.getLogger(Register_form.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_cmb_religionItemStateChanged
+
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
+        // TODO add your handling code here:`
+        this.setVisible(false);
+        Register_form r=new Register_form();
+        r.setVisible(true);
+    }//GEN-LAST:event_btn_clearActionPerformed
+
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        welcome w=new welcome();
+        w.setVisible(true);
+    }//GEN-LAST:event_btn_backActionPerformed
+
+    private void btn_maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_maleActionPerformed
+        // TODO add your handling code here:
+      btn_male.setActionCommand("male");
+      btn_female.setActionCommand("female");
+      String g=buttonGroup1.getSelection().getActionCommand();
+      
+    }//GEN-LAST:event_btn_maleActionPerformed
+
+    private void cmb_ddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_ddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmb_ddActionPerformed
 
     /**
      * @param args the command line arguments
